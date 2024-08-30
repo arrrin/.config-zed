@@ -1,0 +1,115 @@
+// Zed settings
+//
+// For information on how to configure Zed, see the Zed
+// documentation: https://zed.dev/docs/configuring-zed
+//
+// To see all of Zed's default settings without changing your
+// custom settings, run the `open default settings` command
+// from the command palette or from `Zed` application menu.
+{
+  "vim_mode": true,
+  "autosave": "on_focus_change",
+  "theme": "Catppuccin Mocha",
+  "ui_font_size": 16,
+  "buffer_font_size": 14,
+  "buffer_font_family": "Monaspace Neon",
+  "format_on_save": "off",
+  "use_auto_surround": true,
+  "inlay_hints": {
+    "enabled": false,
+    "show_type_hints": true,
+    "show_parameter_hints": true,
+    "show_other_hints": true,
+    "edit_debounce_ms": 2000,
+    "show_error":true,
+    "scroll_debounce_ms": 50
+  },
+  "indent_guides": {
+    "enabled": true,
+    "line_width": 1,
+    "active_line_width": 1,
+    "coloring": "fixed",
+    "background_coloring": "indent_aware"
+  },
+  "project_panel": {
+    "button": true,
+    "default_width": 240,
+    "dock": "left",
+    "file_icons": true,
+    "folder_icons": true,
+    "git_status": true,
+    "indent_size": 10,
+    "auto_reveal_entries": true,
+    "auto_fold_dirs": true,
+    "scrollbar": {
+      "show": "always"
+    }
+  },
+  "languages": {
+    "JavaScript": {
+      "code_actions_on_format": {
+        "source.fixAll.eslint": true
+      }
+    },
+    "TypeScript": {
+      "enable_language_server": true,
+      "code_actions_on_format": {
+        "source.organizeImports": true
+      }
+    },
+    "TSX": {
+      "code_actions_on_format": {
+        "source.organizeImports": true
+      }
+    }
+  },
+  "lsp": {
+    "eslint": {
+      "settings": {
+        "codeActionOnSave": {
+          "rules": [
+            "import/order"
+          ]
+        },
+        "rulesCustomizations": [
+          {
+            "rule": "*",
+            "severity": "warn"
+          }
+        ],
+        "problems": {
+          "shortenToSingleLine": true
+        }
+      }
+    },
+    "typescript-language-server": {
+      "initialization_options": {
+        "preferences": {
+          "quotePreference": "double",
+          "semicolons": "insert",
+          "strictNullChecks": true,
+          "includeInlayParameterNameHints": "all",
+          "includeInlayParameterNameHintsWhenArgumentMatchesName": false,
+          "includeInlayFunctionParameterTypeHints": false,
+          "includeInlayVariableTypeHints": false,
+          "includeInlayVariableTypeHintsWhenTypeMatchesName": true,
+          "includeInlayPropertyDeclarationTypeHints": false,
+          "includeInlayFunctionLikeReturnTypeHints": false,
+          "includeInlayEnumMemberValueHints": false
+        }
+      }
+    }
+  },
+  "tab_size": 2,
+  "enable_language_server": true,
+  "formatter": "language_server",
+  "telemetry": {
+    "diagnostics": false,
+    "metrics": false
+  },
+  "tabs": {
+    "close_position": "left",
+    "file_icons": true,
+    "git_status": true
+  }
+}
