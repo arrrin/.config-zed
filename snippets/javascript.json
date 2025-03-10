@@ -1,34 +1,81 @@
 {
-    "Log to the console": {
-        "prefix": "clg",
-        "body": [
-            "console.log($1);",
-            "$0"
-        ],
-        "description": "Log to the console"
-    },
-    "Log warning to console": {
-        "prefix": "warn",
-        "body": [
-            "console.warn($1);",
-            "$0"
-        ],
-        "description": "Log warning to the console"
-    },
-    "Log error to console": {
-        "prefix": "error",
-        "body": [
-            "console.error($1);",
-            "$0"
-        ],
-        "description": "Log error to the console"
-    },
-    "Throw Exception": {
-        "prefix": "throw",
-        "body": [
-            "throw new Error(\"$1\");",
-            "$0"
-        ],
-        "description": "Throw Exception"
-    }
+  "Log to the console": {
+    "prefix": "clg",
+    "body": [
+      "console.log($1);"
+    ],
+    "description": "Log to the console"
+  },
+  "function create": {
+    "prefix": "fc",
+    "body": [
+      "function ${1:functionName}(${2:params}) {",
+      "$0",
+      "}"
+    ],
+    "description": "Create an async function "
+  },
+  "async function create": {
+    "prefix": "afc",
+    "body": [
+      "async function ${1:functionName}(${2:params}) {",
+      "$0",
+      "}"
+    ],
+    "description": "Create an async function "
+  },
+  "export async function create": {
+    "prefix": "eafc",
+    "body": [
+      "export async function ${1:functionName}(${2:params}) {",
+      "$0",
+      "}"
+    ],
+    "description": "Create an async function "
+  },
+  "Log warning to console": {
+    "prefix": "warn",
+    "body": [
+      "console.warn($1);",
+      "$0"
+    ],
+    "description": "Log warning to the console"
+  },
+  "Log error to console": {
+    "prefix": "error",
+    "body": [
+      "console.error($1);",
+      "$0"
+    ],
+    "description": "Log error to the console"
+  },
+  "Throw Exception": {
+    "prefix": "throw",
+    "body": [
+      "throw new Error(\"$1\");",
+      "$0"
+    ],
+    "description": "Throw Exception"
+  },
+  "Create React TSX Component": {
+    "prefix": "react-tsx",
+    "body": [
+      "import React from 'react';",
+      "",
+      "interface ${1:ComponentName}Props {",
+      "  $2",
+      "}",
+      "",
+      "const ${1:ComponentName}: React.FC<${1:ComponentName}Props> = ({ $3 }) => {",
+      "  return (",
+      "    <div>",
+      "      $0",
+      "    </div>",
+      "  );",
+      "};",
+      "",
+      "export default ${1:ComponentName};"
+    ],
+    "description": "Create a React TypeScript component"
+  }
 }
